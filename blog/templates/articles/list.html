@@ -3,7 +3,7 @@
 {% block title %}
     Articles list
 {% endblock %}
-
+{% include "header.html" %}
 {% block body %}
     <h1>Articles</h1>
 <!--Добавляем в список статей ссылку на создание новой:-->
@@ -19,4 +19,5 @@
 <hr>
 <a href="{{ url_for('articles_app.create') }}">Create new</a>
 </div>
+{% include "footer.html" %}
 {% endblock %}

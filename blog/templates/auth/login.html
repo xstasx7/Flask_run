@@ -3,11 +3,12 @@
 {% from "macro/formhelpers.html" import render_field %}
 
 {% block title %}
-    Register
+    АВТОРИЗАЦИЯ
 {% endblock %}
+{% include "header.html" %}
 
 {% block body %}
-    <h1>Register</h1>
+    <h1>АВТОРИЗАЦИЯ</h1>
     {% if error %}
         <div class="alert alert-danger">
             {{ error }}
@@ -26,6 +27,6 @@
         <div>
             {{ form.submit(class="btn btn-primary btn-lg") }}
         </div>
-
     </form>
+{% include "footer.html" %}
 {% endblock %}

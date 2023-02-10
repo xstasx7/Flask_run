@@ -3,7 +3,7 @@
 {% block title %}
     Authors list
 {% endblock %}
-
+{% include "header.html" %}
 {% block body %}
     <h1>Authors</h1>
     <div>
@@ -17,6 +17,8 @@
             </ul>
         {% else %}
             <h3>No authors yet</h3>
+
         {% endif %}
     </div>
+{% include "footer.html" %}
 {% endblock %}
