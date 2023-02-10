@@ -1,0 +1,19 @@
+<!--шаблон страницы отдельного пользователя.-->
+{% extends 'base.html' %}
+
+{% block title %}
+    User #{{ user.id }}
+{% endblock %}
+
+{% block body %}
+    <h1>
+        {{ user.name }}
+    </h1>
+    {% if user.is_staff %}
+        <span class="badge bg-secondary">staff</span>
+    {% endif %}
+<!--добавляем ссылку «обратно» — к списку пользователей:-->
+<div>
+    <a href="{{ url_for('users_app.list') }}">Back to users list</a>
+</div>
+{% endblock %}
